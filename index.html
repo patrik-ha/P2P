@@ -13,13 +13,21 @@
 </head>
 
 <body>
-    <p id="recieved-messages"></p>
-    <p id="connected-to"></p>
-    <input id="target-id" type="text">
-    <button onclick="connect()">Connect</button>
+    <h3>My ID: <span id="my-id"></span></h3>
+    <h3>Connected to: <span id="connected-to"></span></h3>
+    <fieldset id="connection-buttons">
+        <input id="target-id" type="text">
+        <button onclick="connect()">Connect</button>
+    </fieldset>
     <h2>MSG</h2>
-    <input id="message" type="text">
-    <button onclick="send()">Send</button>
+    <fieldset id="messaging-buttons" disabled>
+        <textarea id="message" type="text"></textarea>
+        <br>
+        <button onclick="send()">Send</button>
+    </fieldset>
+    <div id="messages">
+    </div>
+
 </body>
 
 </html>
